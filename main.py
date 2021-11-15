@@ -1,6 +1,7 @@
 import json
 from src.utils import contarPares
 from src.utils import comparoLista
+from src.utils import subcampeon
 
 
 # x = 10
@@ -73,3 +74,6 @@ from src.utils import comparoLista
 
 # print(n1)
 
+puntaje=[2,6,10,10,7,5,6]
+
+print(subcampeon(puntaje)
