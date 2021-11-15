@@ -22,3 +22,12 @@ def comparoLista( a, b):
     comparasion = 1
 
   return comparasion
+
+def subcampeon (puntaje):
+  puntaje.sort(reverse=True)
+  maximo = max(puntaje)
+  i=0
+  while maximo == puntaje[i]:
+    i=i+1
+  return puntaje [i]
+
