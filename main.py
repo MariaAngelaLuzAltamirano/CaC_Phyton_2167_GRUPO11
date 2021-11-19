@@ -2,6 +2,8 @@ import json
 from src.utils import contarPares
 from src.utils import comparoLista
 from src.utils import mayusculaNombreApellido
+from src.utils import subcampeon
+from src.utils import stringInmutables
 
 
 # x = 10
@@ -74,5 +76,18 @@ from src.utils import mayusculaNombreApellido
 
 # print(n1)
 
+#4
 resultadoMayusculas = mayusculaNombreApellido("guillermo miller")
 print(resultadoMayusculas)
+
+#FUNCIONES A CREAR
+#5
+
+puntaje=[2,6,10,10,7,5,6]
+
+print(subcampeon(puntaje))
+
+#3
+
+print(stringInmutables("Hola Mundo", 6, "a"))
+
