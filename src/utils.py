@@ -54,7 +54,7 @@ def stringInmutables (string, indice, letra):
   return stringFinal
 
 
-#Escribir una funcion que reciba un string y devuelva un string con la primera letra en mayuscula y el resto en minuscula
+# 2- Escribir una funcion que reciba un string y devuelva un string con la primera letra en mayuscula y el resto en minuscula
 
 def uppercaseToLowercase(string):
     newString = ""
