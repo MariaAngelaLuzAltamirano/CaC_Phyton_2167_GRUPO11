@@ -54,3 +54,18 @@ def stringInmutables (string, indice, letra):
   return stringFinal
 
 
+# 2- Escribir una funcion que reciba un string y devuelva un string con la primera letra en mayuscula y el resto en minuscula
+
+def uppercaseToLowercase(string):
+    newString = ""
+
+    if len(string) > 100:
+        return "String mayor a 100 caracteres"
+    else:
+        for i in range(len(string)):
+            if string[i].isupper():
+                newString += string[i].lower()
+            else:
+                newString += string[i].upper()
+                
+	return newString
