@@ -23,6 +23,13 @@ def comparoLista( a, b):
 
   return comparasion
 
+# 4- Escribir una funcion que reciba un string con nombre y apellido y devuelva un string con el nombre y apellido
+#pero con capitalizacion(primera letra mayuscula)
+
+def mayusculaNombreApellido(nombreApellido):
+  resultado = nombreApellido.title()
+  return resultado
+
 # 5- Escribir una funcion que reciba N numeros, los cuales representan la puntuacion de un concurso, y 
 # esta devuelve la puntuacion del subcampeon. (ejemplo de ingreso de datos... [2,6,10,10,7,5,6], debe devolver 7)
 
@@ -45,6 +52,5 @@ def stringInmutables (string, indice, letra):
   stringFinal = string.replace(letraAcambiar, letra)
 
   return stringFinal
-
 
 
