@@ -22,3 +22,9 @@ def comparoLista( a, b):
     comparasion = 1
 
   return comparasion
+
+
+def mayusculaNombreApellido(nombreApellido):
+  resultado = nombreApellido.title()
+  return resultado
+

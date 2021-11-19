@@ -1,6 +1,7 @@
 import json
 from src.utils import contarPares
 from src.utils import comparoLista
+from src.utils import mayusculaNombreApellido
 
 
 # x = 10
@@ -73,3 +74,5 @@ from src.utils import comparoLista
 
 # print(n1)
 
+resultadoMayusculas = mayusculaNombreApellido("guillermo miller")
+print(resultadoMayusculas)
