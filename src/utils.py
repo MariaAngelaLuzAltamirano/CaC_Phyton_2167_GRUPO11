@@ -69,3 +69,85 @@ def uppercaseToLowercase(string):
                 newString += string[i].upper()
                 
 	return newString
+
+#Ejercicios con clases
+#1 - Crear una clase que represente un numero complejo. Tenga 4 metodos que permita las operaciones matematicas basicas (+,-,*,/).
+class numero_complejo:
+    def __init__(self, real, imaginario):
+        self.real = real
+        self.imaginario = imaginario
+#--------------------------Getter y Setter------------------------------------
+    def getreal(self):
+        return self.real
+    
+    def getimaginario(self):
+        return self.imaginario
+
+    def setreal(self, real):
+        self.real = real
+    
+    def setimaginario(self, imaginario):
+        self.imaginario = imaginario
+        
+    def __str__(self):
+        if self.imaginario < 0:
+            return "{} - {}i".format(self.real, abs(self.imaginario))
+        else:
+            return "{} + {}i".format(self.real, self.imaginario)
+
+#----------------------------Metodos------------------------------------------
+    def suma(c1,c2):
+        a = c1.getreal()    #obtengo los valores de los atributos
+        c = c2.getreal()    #tambien puede ser c = c2.real
+        b = c1.getimaginario() 
+        d = c2.getimaginario()
+        aux = numero_complejo((a+c),(b+d))
+        return aux
+
+    def resta(c1, c2):
+        a = c1.getreal() 
+        c = c2.getreal()
+        b = c1.getimaginario() 
+        d = c2.getimaginario()
+        aux = numero_complejo((a-c),(b-d))
+        return aux
+
+    def mul(c1, c2):
+        a = c1.getreal() 
+        c = c2.getreal()
+        b = c1.getimaginario() 
+        d = c2.getimaginario()
+        aux = numero_complejo (((a*c) - (b*d)), ((a*d) + (b*c)))
+        return aux
+        
+    def div(c1, c2):
+        a = c1.getreal() 
+        c = c2.getreal()
+        b = c1.getimaginario() 
+        d = c2.getimaginario()
+        aux = (((a*c) + (b*d)) / ((c*c) + (d*d))), (((b*c) - (a*d)) / ((c*c) + (d*d)))
+        return aux
+
+c1 = numero_complejo(1.0,1.0)
+c2 = numero_complejo(2.0,2.0)
+
+print("Para los siguientes numeros complejos: ")
+print("c1 = ",c1)
+print("c2 = ",c2)
+
+print("\nEl resultado de la operaciones son:\n")
+c3 = numero_complejo.suma(c1,c2)
+print("Suma")
+print("c3 = ",c3)
+
+c3 = numero_complejo.resta(c1,c2)
+print("\nResta")
+print("c3 = ",c3)
+
+c3 = numero_complejo.mul(c1,c2)
+print("\nMultiplicación")
+print("c3 = ",c3)
+
+c3 = numero_complejo.div(c1,c2)
+print("\nDivision")
+print("c3 = ",c3)
